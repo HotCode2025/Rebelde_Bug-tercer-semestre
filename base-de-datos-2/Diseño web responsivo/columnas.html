@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- La etiqueta meta viewport es fundamental para el diseño responsivo, 
+         asegura que la página y el nivel de zoom inicial se adapten al ancho del dispositivo -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicio de Columnas Responsivas</title>
+    <!-- Enlace a la hoja de estilos externa -->
+    <link rel="stylesheet" href="columnas.css" />
+  </head>
+  <body>
+    <br />
+    <h2 style="text-align: center">Trabajo Práctico: Diseño Web Responsivo</h2>
+    <br />
+
+    <!-- El contenedor principal envuelve el contenido y limita su ancho máximo para pantallas grandes,
+         manteniéndolo centrado y ordenado. -->
+    <div class="contenedor">
+      <!-- La fila actúa como el elemento organizador (flex container) que agrupa estructuralmente a las columnas -->
+      <div class="fila">
+        <!-- Cada columna es un bloque (flex item) que se adapta al espacio de la fila -->
+        <div class="columna">
+          <p>Contenido de la primera columna</p>
+        </div>
+
+        <div class="columna">
+          <p>Contenido de la segunda columna</p>
+        </div>
+
+        <div class="columna">
+          <p>Contenido de la tercera columna</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
