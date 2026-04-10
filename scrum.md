@@ -85,6 +85,7 @@ La metodología Scrum permite mejorar la organización del equipo, optimizar los
 ---
 
 ## Semana 06/04/26 al 10/04/26
+
 Día Lunes, primer clase Programación III, todos realizamos asistencia, luego conexión al vivo, comentarios de reencuentro. Camila Scheurer no continuará por problemas personales, ya no está ni en la facultad ni en el grupo.
 Rubén ofrece crear repositorio, Melina aporta según comentario del profesor de llame 3er semestre.
 Jimena y Maximiliano desarrollan y consultan UML con el grupo, plantean entrega para lograrla antes de las 23hrs.
@@ -96,6 +97,23 @@ Grupo concuerdan todos en realizar la entrega. Se entrega en tiempo y forma.
 
 Día Miércoles
 Melina temprano avisa que hará uso del repositorio para suba de clases Py, Rubén sugiere que mantengamos una única rama prueba. Queda repositorio disponible para que grupo pueda continuar aportando.
+Profe indica que no enviamos UML via repositorio, postergamos presentación para el Lunes, habiamos comprendido la entrega del diagrama como .uxf pero no como .js
+
+Día Jueves
+Asistencia y clase de Inglés
+
+Día Viernes
+Coordinamos corrección de diagrama UML reconocemos diferencias de lenguajes corregimos errores en el diagrama UML como nombres de clases, herencia y responsabilidades.
+Luego se implementó el sistema en JavaScript aplicando POO.
+Se utilizó herencia para evitar duplicación de código y composición para representar que una computadora está formada por varios componentes.
+Además, la clase Orden permite agrupar computadoras como si fuera un pedido.
+El archivo .js representa la versión corregida y funcional del sistema, que vamos a exponer oralmente el día Lunes.
+Mica aporta el diagrama UML al repo para que lo corrijamos en base al trabajo de Maxi y Jime. Rubén y Melina aportan al repo al cual también van a sumar trabajos de clase Java Ivana y José.
+
+## Semana 13/04/26 al 17/04/26
+
+Día Lunes
+Presentamos trabajo y corrección de clases del día Lunes 6/04 y exposicion Miércoles 08/04
 
 ## 📎 Anexos (a agregar)
 
