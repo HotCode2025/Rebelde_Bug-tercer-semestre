@@ -1,73 +1,40 @@
-/* =========================================================================
-   ATRIBUTOS GENERALES
-   ========================================================================= */
-
-/* El selector universal (*) aplica estas propiedades a toda la página.
-   box-sizing: border-box es una buena práctica porque asegura que el padding 
-   y los bordes no aumenten el ancho máximo definido en los elementos. */
+/* --- ETIQUETAS DE RESETEO Y GLOBALES --- */
 * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Asegura que el padding no afecte el ancho total */
+    font-family: Arial, sans-serif;
 }
 
-body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-}
-
-/* =========================================================================
-   CLASES DEL DISEÑO RESPONSIVO (GRID / FLEXBOX)
-   ========================================================================= */
-
-/* Clase .contenedor: 
-   Centra el principal bloque de contenido en la pantalla y le da un ancho máximo 
-   para que no se estire demasiado en monitores de PC. */
+/* --- ESTRUCTURA DE CONTENEDORES --- */
 .contenedor {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto; /* Centra el div horizontalmente automáticamentente */
-  padding: 0 15px; /* Evita que el contenido toque los bordes laterales en teléfonos móviles */
+    width: 95%;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-/* Clase .fila: 
-   Utiliza Flexbox para ordenar los elementos hijos (.columna) uno al lado del otro. */
 .fila {
-  display: flex;
-  flex-wrap: wrap; /* Permite que las columnas pasen hacia abajo si en algún momento no hay espacio suficiente (responsivo) */
-  margin: 0 -15px; /* Compensa el padding del contenedor para perfeccionar la alineación */
+    display: flex;
+    flex-wrap: wrap; /* Permite que las columnas bajen en móviles */
+    margin-bottom: 10px;
 }
 
-/* Clase .columna: 
-   Define cómo se comportan y se separan los bloques dentro de la fila. */
-.columna {
-  flex: 1; /* El valor 1 le indica al navegador que todas las columnas van a crecer y ocupar la misma proporción del espacio disponible (fracciones iguales) */
-  padding: 0 15px; /* Espaciado que actúa como separador ("gutter" o canaleta) entre las distintas columnas */
-  margin-bottom: 20px; /* Evita que las columnas se peguen verticalmente cuando pasen a la línea de abajo */
+/* --- ETIQUETAS DE COLUMNAS (MÓVIL POR DEFECTO) --- */
+/* En pantallas pequeñas, todas las columnas ocupan el 100% */
+[class*="col-"] {
+    width: 100%; 
+    padding: 15px;
+    border: 1px solid #ccc;
+    text-align: center;
+    background-color: #f9f9f9;
 }
 
-/* =========================================================================
-   MEDIA QUERIES (ADAPTACIÓN A MÓVILES)
-   ========================================================================= */
-
-/* Cuando la pantalla sea de 768px o menos (teléfonos o tablets pequeñas), 
-   cada columna ocupará el 100% del ancho para no quedar aplastada. */
-@media (max-width: 768px) {
-  .columna {
-    flex: 0 0 100%; /* Obliga a cada columna a tomar todo el ancho de la fila */
-  }
-}
-
-/* =========================================================================
-   ESTILOS VISUALES PARA DEMOSTRACIÓN (Opcional)
-   ========================================================================= */
-
-/* Se añaden estos colores y bordes para que el profesor pueda 
-   visualizar claramente las cajas del sistema de grilla al evaluar. */
-.columna p {
-  background-color: #f4f4f4; /* Color de fondo para distinguir el contenido */
-  padding: 20px; /* Empuja el texto hacia el interior alejándolo de los bordes */
-  border: 1px solid #c2c2c2; /* Borde visible */
-  border-radius: 5px; /* Bordes ligeramente redondeados (opcional estético) */
-  text-align: center; /* Centra el texto */
+/* --- MEDIA QUERIES (DISPOSITIVOS GRANDES / TABLETS) --- */
+/* Aquí se definen los anchos cuando la pantalla supera los 768px */
+@media (min-width: 768px) {
+    .col-2 { width: 16.66%; }
+    .col-4 { width: 33.33%; }
+    .col-6 { width: 50%; }
+    .col-8 { width: 66.66%; }
+    .col-12 { width: 100%; }
 }

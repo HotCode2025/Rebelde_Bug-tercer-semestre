@@ -1,37 +1,59 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <!-- La etiqueta meta viewport es fundamental para el diseño responsivo, 
-         asegura que la página y el nivel de zoom inicial se adapten al ancho del dispositivo -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ejercicio de Columnas Responsivas</title>
-    <!-- Enlace a la hoja de estilos externa -->
-    <link rel="stylesheet" href="columnas.css" />
-  </head>
-  <body>
-    <br />
+<head>
+    <meta charset="UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Ejercicio de Columnas Responsivas - Documentado</title>
+    
+    <link rel="stylesheet" href="columnas.css">
+</head>
+<body>
+
+    <br>
     <h2 style="text-align: center">Trabajo Práctico: Diseño Web Responsivo</h2>
-    <br />
+    <br>
 
-    <!-- El contenedor principal envuelve el contenido y limita su ancho máximo para pantallas grandes,
-         manteniéndolo centrado y ordenado. -->
     <div class="contenedor">
-      <!-- La fila actúa como el elemento organizador (flex container) que agrupa estructuralmente a las columnas -->
-      <div class="fila">
-        <!-- Cada columna es un bloque (flex item) que se adapta al espacio de la fila -->
-        <div class="columna">
-          <p>Contenido de la primera columna</p>
+        
+        <header class="fila">
+            <div id="logo" class="col-log-2">
+                <p>Logo (2 col)</p>
+            </div>
+            
+            <div class="col-log-8">
+                <p>Encabezado Central (8 col)</p>
+            </div>
+            
+            <div class="col-log-2">
+                <p>Redes (2 col)</p>
+            </div>
+        </header>
+
+        <nav class="fila" style="border: 1px solid black; padding: 20px; background: #f4f4f4; text-align: center; margin-top: 10px;">
+            NavBar (Barra de Navegación)
+        </nav>
+
+        <section id="seccion3" class="fila" style="border: 1px solid black; padding: 20px; background: #f4f4f4; text-align: center; margin-top: 10px;">
+            Sección de Contenido 3
+        </section>
+
+        <section id="seccion4" class="fila" style="border: 1px solid black; padding: 20px; background: #f4f4f4; text-align: center; margin-top: 10px;">
+            Sección de Contenido 4
+        </section>
+
+        <div class="fila">
+            <article class="col-4">Servicio A</article>
+            <article class="col-4">Servicio B</article>
+            <article class="col-4">Servicio C</article>
         </div>
 
-        <div class="columna">
-          <p>Contenido de la segunda columna</p>
-        </div>
+        <footer class="fila" style="border: 1px solid black; padding: 15px; text-align: center; margin-top: 10px;">
+            <div class="col-12">
+                <p>&copy; 2026 - Clase de Diseño Web Responsivo</p>
+            </div>
+        </footer>
 
-        <div class="columna">
-          <p>Contenido de la tercera columna</p>
-        </div>
-      </div>
-    </div>
-  </body>
+    </div> </body>
 </html>
