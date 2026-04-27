@@ -113,7 +113,19 @@ Mica aporta el diagrama UML al repo para que lo corrijamos en base al trabajo de
 ## Semana 13/04/26 al 17/04/26
 
 Día Lunes
-Presentamos trabajo y corrección de clases del día Lunes 6/04 y exposicion Miércoles 08/04
+Presentamos trabajo y corrección de clases del día Lunes 6/04 y exposicion Miércoles 08/04.
+Día Martes tarea Base de datos, armamos doc para control de tareas de todas las materias. Lo arma Jime, todos nos acoplamos a verificar y marcar lo ya realizado y lo que vamos a hacer.
+Día Miércoles vista de tareas, charla con profe, vivo.
+Día Jueves Zoom Inglés
+Día Viernes Charla de metodología propuesta y debate de startup.
+
+## Semana 21/04/26 al 24/04/26
+
+Semana ascincrónica, nuestros respetos a Mati Carballo. NOs vamos comunicando para verificar lo realizado, recordarnos la asistencia sincrónica, en shock por la noticia.
+
+## Semana 27/04/26 al 01/05/26
+
+Tenemos que si o si definir la start up. Lunes de control de tareas y commits
 
 ## 📎 Anexos (a agregar)
 
@@ -122,3 +134,4 @@ Presentamos trabajo y corrección de clases del día Lunes 6/04 y exposicion Mi�
 
 - Commits realizados
 ![Commits del equipo](ImagenesScrum/commits0804.PNG)
+![Commits del equipo](ImagenesScrum/commits1304.PNG)
