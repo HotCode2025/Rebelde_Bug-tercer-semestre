@@ -59,6 +59,68 @@ body {
 }
 
 /* =========================================================================
+   MEDIA QUERIES (SEGUNDA ADAPTACION PARA PANTALLAS MÓVILES)
+   ========================================================================= */
+@media(max-width:767px) {
+   .col-xs-12{width:100%;}
+   .col-xs-11{width:91.66666667%;}
+   .col-xs-10{width:83.33333333%;}
+   .col-xs-9{width:75%;}
+   .col-xs-8{width:66.666666666%;}
+   .col-xs-7{width:58.33333333%;}
+   .col-xs-6{width:50%;}
+   .col-xs-5{width:41.66666666%;}
+   .col-xs-4{width:33.33333333%;}
+   .col-xs-3{width:25%;}
+   .col-xs-2{width:16.66666667%;}
+   .col-xs-1{width:8.333333333%;}
+}
+
+/* =========================================================================
+   MEDIA QUERIES (PANTALLAS SUPERIORES)
+   ========================================================================= */
+
+/* Continuamos por las pantallas superiores a 1200PX, se modifican atributos 
+   para mejorar punto de quiebre de pantallas grandes: .col -> .col-lg .*/
+
+@media(min-width:1200px){
+   .col-lg-12{width:100%;}
+   .col-lg-11{width:91.66666667%;}
+   .col-lg-10{width:83.33333333%;}
+   .col-lg-9{width:75%;}
+   .col-lg-8{width:66.666666666%;}
+   .col-lg-7{width:58.33333333%;}
+   .col-lg-6{width:50%;}
+   .col-lg-5{width:41.66666666%;}
+   .col-lg-4{width:33.33333333%;}
+   .col-lg-3{width:25%;}
+   .col-lg-2{width:16.66666667%;}
+   .col-lg-1{width:8.333333333%;}
+}
+
+/* =========================================================================
+   MEDIA QUERIES (PANTALLAS MEDIANAS)
+   ========================================================================= */
+
+/* Continuamos por las pantallas medianas, modificamos el atributo por el 
+   siguiente: .col -> .col-md .*/
+
+   @media(max-width:1199px) and (min-width: 992px){
+   .col-md-12{width:100%;}
+   .col-md-11{width:91.66666667%;}
+   .col-md-10{width:83.33333333%;}
+   .col-md-9{width:75%;}
+   .col-md-8{width:66.666666666%;}
+   .col-md-7{width:58.33333333%;}
+   .col-md-6{width:50%;}
+   .col-md-5{width:41.66666666%;}
+   .col-md-4{width:33.33333333%;}
+   .col-md-3{width:25%;}
+   .col-md-2{width:16.66666667%;}
+   .col-md-1{width:8.333333333%;}
+}
+ 
+/* =========================================================================
    ESTILOS VISUALES PARA DEMOSTRACIÓN (Opcional)
    ========================================================================= */
 
@@ -71,3 +133,36 @@ body {
   border-radius: 5px; /* Bordes ligeramente redondeados (opcional estético) */
   text-align: center; /* Centra el texto */
 }
+
+[class*="col-"]{
+   float: left;
+   border:1 px solid black;
+   padding: 20px;
+}
+/* Inscripcion "Logotipo" agregado en la parte superior*/
+header #logo{
+   font-family:"Kaushan Script", cursive;
+   font-size: 50px;
+   text-align: center;
+   line-height: 60px;
+}
+/* Se colorean los posibles botones para redes sociales*/
+header center{
+    width:42px;
+    line-height:42px;
+    border-radius:100%;
+    background:#ccc;
+    color:white;
+
+}
+ header center#icono1{
+    background: blue;
+ }
+
+ header center#icono2{
+    background: green;
+ }
+
+ header center#icono3{
+    background: red;
+ }
