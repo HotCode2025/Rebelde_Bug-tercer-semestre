@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Piedra, papel y tijera</title>
+    <script>
+
+        // Variables
+        let jugador = 0
+        let max = 3
+        let min = 1
+
+        //Funcion aleatoria para PC dada en clase
+        //let pc = Math.floor(Math.random()*(max-min+1)+min)
+
+
+        function elegirPC(){
+        let opciones = [1, 2, 3]
+        let aleatorio = Math.floor(Math.random() * opciones.length)
+        return opciones[aleatorio]
+        }
+
+        let pc =elegirPC()
+
+        //OPCIONES
+
+        //let math.ceil(math.random()*3)
+
+        /*function elegirPC(){
+        return Math.ceil(Math.random() * 3)
+        }*/
+
+        //Solicitud al Jugador
+        jugador = Number(prompt("Elige: 1 piedra, 2 papel, 3 tijera"))
+
+        //alert("Elije jugador"+jugador)
+
+        // Traduccion de numero en eleccion -> 1:PIEDRA  2:PAPEL  3:TIJERA
+        if(jugador == 1){
+            alert("Elegiste piedra")
+        }else if(jugador == 2){
+            alert("Elejiste papel")
+        }
+        else if(jugador == 3){
+            alert("Elejiste tijera")
+        }
+        else{
+            alert("Elegiste mal")
+        }
+        
+         //Impresion de resultados
+        alert("PC: " + pc)
+        alert("Jugador: " + jugador)
+
+        //Combate
+        if(pc == jugador){
+            alert("Empate")
+        } 
+        else if(jugador == 1 && pc == 3){
+            alert("Ganaste!")
+        }
+        else if(jugador == 2 && pc == 1){
+            alert("Ganaste!")
+        }
+        else if(jugador == 3 && pc == 2){
+            alert("Ganaste!")
+        }
+        else{
+            alert("Perdiste :c")
+        }
+
+       
+    </script>
+
+</head>
+<body>
+    <h1>Piedra, Papel y Tijera</h1>
+</body>
+</html>
