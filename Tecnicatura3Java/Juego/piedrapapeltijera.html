@@ -6,71 +6,93 @@
     <title>Piedra, papel y tijera</title>
     <script>
 
-        // Variables
+        /*
+         * =============================================
+         *   JUEGO: PIEDRA, PAPEL Y TIJERA
+         *   Descripción: El jugador elige una opción
+         *   (1=piedra, 2=papel, 3=tijera) mediante un
+         *   prompt, y la PC elige al azar. Luego se
+         *   comparan las elecciones para ver quién ganó.
+         * =============================================
+         */
+
+        // --- VARIABLES GLOBALES ---
+        // Guardamos la elección del jugador (empieza en 0, se actualiza con el prompt)
         let jugador = 0
+
+        // Rango de opciones: min=1 (piedra) hasta max=3 (tijera)
+        // Estas variables se pasan como parámetros a la función elegirPC()
         let max = 3
         let min = 1
 
-        //Funcion aleatoria para PC dada en clase
-        //let pc = Math.floor(Math.random()*(max-min+1)+min)
 
-
-        function elegirPC(){
-        let opciones = [1, 2, 3]
-        let aleatorio = Math.floor(Math.random() * opciones.length)
-        return opciones[aleatorio]
+        // --- FUNCIÓN: elegirPC(min, max) ---
+        // Genera un número entero aleatorio entre min y max (ambos inclusive).
+        // Fórmula: Math.floor(Math.random() * (max - min + 1) + min)
+        //   - Math.random()        → número decimal entre 0 (inclusive) y 1 (exclusive)
+        //   - * (max - min + 1)    → lo escala al rango de opciones (en este caso, 3)
+        //   - + min                → desplaza el resultado para que empiece en min (1)
+        //   - Math.floor(...)      → redondea hacia abajo para obtener un entero
+        // Al recibir min y max como parámetros, la función es reutilizable para cualquier rango.
+        function elegirPC(min, max){
+            return Math.floor(Math.random() * (max - min + 1) + min)
         }
 
-        let pc =elegirPC()
+        // La PC elige ANTES que el jugador, pasando las variables min y max como argumentos
+        let pc = elegirPC(min, max)
 
-        //OPCIONES
 
-        //let math.ceil(math.random()*3)
-
-        /*function elegirPC(){
-        return Math.ceil(Math.random() * 3)
-        }*/
-
-        //Solicitud al Jugador
+        // --- SOLICITUD AL JUGADOR ---
+        // prompt() muestra un cuadro de texto y devuelve lo ingresado como String.
+        // Number() convierte ese String a número para poder compararlo con los valores de pc.
         jugador = Number(prompt("Elige: 1 piedra, 2 papel, 3 tijera"))
 
-        //alert("Elije jugador"+jugador)
 
-        // Traduccion de numero en eleccion -> 1:PIEDRA  2:PAPEL  3:TIJERA
+        // --- TRADUCCIÓN DE NÚMERO A NOMBRE ---
+        // Mostramos en texto qué eligió el jugador para que sea más claro.
+        // Si el valor no es 1, 2 ni 3, informamos que la elección fue inválida.
         if(jugador == 1){
             alert("Elegiste piedra")
-        }else if(jugador == 2){
-            alert("Elejiste papel")
-        }
-        else if(jugador == 3){
-            alert("Elejiste tijera")
-        }
-        else{
+        } else if(jugador == 2){
+            alert("Elegiste papel")
+        } else if(jugador == 3){
+            alert("Elegiste tijera")
+        } else{
             alert("Elegiste mal")
         }
-        
-         //Impresion de resultados
+
+
+        // --- MOSTRAR RESULTADOS ---
+        // Revelamos qué eligió la PC y qué eligió el jugador antes de resolver el combate.
         alert("PC: " + pc)
         alert("Jugador: " + jugador)
 
-        //Combate
+
+        // --- COMBATE (lógica del juego) ---
+        // Reglas:   Piedra (1) le gana a Tijera (3)
+        //           Papel  (2) le gana a Piedra (1)
+        //           Tijera (3) le gana a Papel  (2)
+        // Si ambos eligieron lo mismo → Empate
         if(pc == jugador){
             alert("Empate")
-        } 
+        }
+        // Piedra (1) vence a Tijera (3)
         else if(jugador == 1 && pc == 3){
             alert("Ganaste!")
         }
+        // Papel (2) vence a Piedra (1)
         else if(jugador == 2 && pc == 1){
             alert("Ganaste!")
         }
+        // Tijera (3) vence a Papel (2)
         else if(jugador == 3 && pc == 2){
             alert("Ganaste!")
         }
+        // Cualquier otro caso → el jugador perdió
         else{
             alert("Perdiste :c")
         }
 
-       
     </script>
 
 </head>
