@@ -21,3 +21,4 @@ except Exception as e:
     print(f'Error: {e}') #Si surge algún error nos muestra el error
 finally:
     conexion.close() #Finaliza la conexion
+
