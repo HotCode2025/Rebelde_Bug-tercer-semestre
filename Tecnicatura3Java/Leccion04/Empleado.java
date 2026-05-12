@@ -1,3 +1,5 @@
+//Clase 1.1 Sobreescritura de métodos Overriding
+
 
 package domain;
 
@@ -10,6 +12,8 @@ public class Empleado {
         this.nombre = nombre;
         this.sueldo = sueldo;
     }
+
+    // Método para la sobreescritura
     public String obtenerDetalles(){
         return "Nombre: "+this.nombre+", Sueldo: "+this.sueldo;
     }

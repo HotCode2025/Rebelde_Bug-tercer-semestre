@@ -1,3 +1,5 @@
+//Clase 4 1.2 Ejercicio: Sobrescritu de métodos Parte 1 y 2
+
 
 package domain;
 
