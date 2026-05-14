@@ -1,0 +1,127 @@
+/* CONFIGURACION INICIAL DE CSS*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Georgia, Times, 'Times New Roman', serif;
+    background-color: #ed6a5a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* TARJETA PRINCIPAL */
+
+.contenedor{
+    background-color: #f4f1bb;
+    width: 420px;
+    padding: 40px;
+    border-radius: 30px;
+    text-align: center;
+    box-shadow:
+    0px 10px 25px rgba(0,0,0,0.08);
+}
+
+/* TITULO */
+
+h1{
+    text-align: center;
+    color: #414142;
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+.subtitulo{
+    color: #74918d;
+    margin-bottom: 35px;
+    font-size: 16px;
+}
+
+/* BOTONES SUPERIORES */
+
+.botones{
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 50px;
+}
+
+.botones button{
+    width: 75px;
+    height: 75px;
+    border: none;
+    border-radius: 18px;
+    background-color: #43557f;
+    font-size: 35px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* CAMBIO DE COLOR CUANDO CURSOR SE POSA ENCIMA */
+
+.botones button:hover{
+    transform: translateY(-5px);
+    background-color: #93b5ad;
+}
+
+/* ELECCIONES */
+
+.elecciones{
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    margin-bottom: 30px;
+}
+
+.mano{
+    font-size: 80px;
+}
+
+/* RESULTADO */
+
+#mensaje{
+    background-color: #a6a9b4;
+    color: #15161b;
+    padding: 15px;
+    border-radius: 15px;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+/* MARCADOR */
+
+#marcador{
+    color: #867b80;
+    font-size: 20px;
+    margin-bottom: 25px;
+}
+
+/* BOTON REINICIAR */
+
+.reiniciar{
+    border: none;
+    padding: 14px 24px;
+    border-radius: 15px;
+    background-color: #9bc1bc;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.reiniciar:hover{
+    background-color: #d8b6e4;
+    transform: scale(1.05);
+}
+
+/* BOTONES DESACTIVADOS */
+
+button:disabled{
+    background-color: #d8d8d8;
+    cursor: not-allowed;
+    transform: none;
+}
