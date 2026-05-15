@@ -121,7 +121,7 @@ Día Viernes Charla de metodología propuesta y debate de startup.
 
 ## Semana 21/04/26 al 24/04/26
 
-Semana ascincrónica, nuestros respetos a Mati Carballo. NOs vamos comunicando para verificar lo realizado, recordarnos la asistencia sincrónica, en shock por la noticia.
+Semana ascincrónica, nuestros respetos a Mati Carballo. Nos vamos comunicando para verificar lo realizado, recordarmos la asistencia sincrónica, en shock por la noticia.
 
 ## Semana 27/04/26 al 01/05/26
 
