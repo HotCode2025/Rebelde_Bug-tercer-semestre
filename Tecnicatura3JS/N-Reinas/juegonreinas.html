@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>N Reinas</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+    <h1>Problema de las N-Reinas</h1>
+
+    <!-- Entrada para elegir N -->
+    <div class="panel">
+
+        <label>Ingrese el valor de N:</label>
+
+        <input type="number" id="valorN" min="4" value="8">
+
+        <button id="boton" onclick="iniciar()">
+            Iniciar Animación
+        </button>
+
+    </div>
+
+    <!-- Estado del algoritmo -->
+    <h2 id="estado"></h2>
+
+    <!-- Tablero -->
+    <div id="tablero"></div>
+
+    <!-- Arreglo -->
+    <h2>Arreglo de posiciones</h2>
+
+    <p id="arreglo"></p>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
