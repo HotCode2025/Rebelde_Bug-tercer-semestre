@@ -1,0 +1,45 @@
+<diagram program="umletino" version="15.1"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>40</x><y>30</y><w>210</w><h>260</h></coordinates><panel_attributes>&lt;&lt;conexion&gt;&gt;
+
+--
+-DATABASE:String
+-USERNAME:String
+-PASSWORD:String
+-DB PORT:String
+-HOST:String
+-conexion: connection
+-cursor:Cursor
+
+--
++ObtenerConexion(cls): Connection
++obtenerCursor(cls): Cursor
++cerrar(cls)
+--
+Responsabilidades
+Administrar la conexion a la base de datos</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>490</x><y>20</y><w>210</w><h>190</h></coordinates><panel_attributes>&lt;&lt;Persona&gt;&gt;
+
+--
+-id_persona: int
+-nombre:String
+-apellido:String
+-email:String
+--
++_str_():String
++metodo Get/Set de cada atributo
+--
+Responsabilidades
+Crear objetos de la entidad Persona</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>400</x><y>410</y><w>240</w><h>240</h></coordinates><panel_attributes>&lt;&lt;PersonaDao&gt;&gt;
+--
+-SELECCIONAR:String
+-INSERTAR:String
+-ACTUALIZAR:String
+-ELIMINAR:String
+
+--
++seleccionar(cls)
++insertar(cls,persona)
++actualizar(cls,persona)
++eliminar(cls,persona)
+--
+Responsabilidades:
+Realizar las operaciones sobre la base
+ de datos de la entidad Persona</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>120</x><y>280</y><w>300</w><h>310</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>280;290;10;290;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>510</x><y>200</y><w>30</w><h>230</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;210;10;10</additional_attributes></element></diagram>
