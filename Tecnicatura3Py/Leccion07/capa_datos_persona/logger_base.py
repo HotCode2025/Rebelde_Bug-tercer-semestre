@@ -1,0 +1,34 @@
+import logging as log
+
+'''# Manejo de logging: Parte 1 - video 2
+#log = logging
+
+# Llamamos una configuración básica
+if __name__=='__main__':
+
+ log.basicConfig(level=log.DEBUG)
+
+# Manejo de logging: Parte 1 - video 3
+ log.debug('Mensaje a nivel debug')
+ log.info('Mensaje a nivel info')
+ log.warning('Mensaje a nivel warning')
+ log.error('Mensaje a nivel error')
+ log.critical('Mensaje a nivel critical') '''
+
+#Manejo de logging: Parte 2 - video 4
+
+if __name__=='__main__':
+
+ log.basicConfig(level=log.DEBUG,
+                 format='%(asctime)s:%(levelname)s [%(filename)s:%(lineno)s] %(message)s',
+                        datefmt='%I:%M:%S %p',
+                 handlers=[
+                            log.FileHandler('capa_datos.log'),
+                            log.StreamHandler()
+                        ] )
+
+ log.debug('Mensaje a nivel debug')
+ log.info('Mensaje a nivel info')
+ log.warning('Mensaje a nivel warning')
+ log.error('Mensaje a nivel error')
+ log.critical('Mensaje a nivel critical')
