@@ -29,36 +29,43 @@ botonPersonajeJugador.addEventListener('click', seleccionarPersonajeJugador);*/
 
 // Variables globales de las secciones y botones
 let sectionSeleccionarAtaque
+let sectionReiniciar
 let botonPersonajeJugador
+let botonReiniciar
 
-// NUEVAS VARIABLES: Botones de ataque del jugador
+// Botones de ataque del jugador
 let botonFuego
 let botonAgua
 let botonTierra
 let botonAire
 
-// NUEVAS VARIABLES: Para guardar los ataques que se eligen
+// Variables para guardar los ataques y las vidas
 let ataqueJugador
 let ataqueEnemigo
+let vidasJugador = 3
+let vidasEnemigo = 3
 
-// Función principal que arranca el juego cuando el HTML está totalmente cargado
+// Función principal que arranca el juego
 function iniciarJuego() {
     sectionSeleccionarAtaque = document.getElementById('seleccionar-ataque')
+    sectionReiniciar = document.getElementById('reiniciar')
     botonPersonajeJugador = document.getElementById('boton-personaje')
+    botonReiniciar = document.getElementById('boton-reiniciar')
 
-    // 1. Vinculamos los botones de ataque del HTML a JS
     botonFuego = document.getElementById('boton-fuego')
     botonAgua = document.getElementById('boton-agua')
     botonTierra = document.getElementById('boton-tierra')
     botonAire = document.getElementById('boton-aire')
 
-    // 2. Ocultamos la sección de ataques al inicio
+    // Ocultamos las secciones que no se necesitan al principio
     sectionSeleccionarAtaque.style.display = 'none'
+    sectionReiniciar.style.display = 'none'
 
-    // 3. Escuchamos los clics
+    // Escuchamos los clics iniciales
     botonPersonajeJugador.addEventListener('click', seleccionarPersonajeJugador)
+    botonReiniciar.addEventListener('click', reiniciarJuego)
     
-    // Escuchamos los clics de los botones de ataque
+    // Escuchamos los clics de los ataques
     botonFuego.addEventListener('click', ataqueFuego)
     botonAgua.addEventListener('click', ataqueAgua)
     botonTierra.addEventListener('click', ataqueTierra)
@@ -93,28 +100,25 @@ function seleccionarPersonajeJugador() {
     }
 }
 
-// NUEVAS FUNCIONES: Qué pasa cuando el jugador presiona un ataque
+// Ataques del jugador
 function ataqueFuego() {
     ataqueJugador = 'FUEGO 🔥'
     ataqueAleatorioEnemigo()
 }
-
 function ataqueAgua() {
     ataqueJugador = 'AGUA 💧'
     ataqueAleatorioEnemigo()
 }
-
 function ataqueTierra() {
     ataqueJugador = 'TIERRA 🌱'
     ataqueAleatorioEnemigo()
 }
-
 function ataqueAire() {
     ataqueJugador = 'AIRE 💨'
     ataqueAleatorioEnemigo()
 }
 
-// Función para el ataque aleatorio del enemigo
+// Ataque aleatorio del enemigo
 function aleatorio(min, max){
     return Math.floor(Math.random() * (max - min + 1) + min)
 }
@@ -132,20 +136,78 @@ function ataqueAleatorioEnemigo() {
         ataqueEnemigo = 'AIRE 💨'
     }
 
-    // Llamamos a una función nueva para mostrar el resultado en el historial
-    crearMensaje()
+    combate()
 }
 
-// NUEVA FUNCIÓN: Muestra en el HTML qué atacó cada uno
-function crearMensaje() {
+// NUEVA FUNCIÓN: Lógica de combate (Quién gana a quién)
+function combate() {
+    let spanVidaJugador = document.getElementById('vidad-jugador') // Mantengo tu id "vidad" del HTML
+    let spanVidaEnemigo = document.getElementById('vidas-enemigo')
+    let resultado
+
+    if (ataqueJugador == ataqueEnemigo) {
+        resultado = "¡EMPATE! 🤝"
+    } else if (
+        (ataqueJugador == 'FUEGO 🔥' && ataqueEnemigo == 'TIERRA 🌱') ||
+        (ataqueJugador == 'AGUA 💧' && ataqueEnemigo == 'FUEGO 🔥') ||
+        (ataqueJugador == 'TIERRA 🌱' && ataqueEnemigo == 'AIRE 💨') ||
+        (ataqueJugador == 'AIRE 💨' && ataqueEnemigo == 'AGUA 💧')
+    ) {
+        resultado = "¡GANASTE ESTA RONDA! 🎉"
+        vidasEnemigo--
+        spanVidaEnemigo.innerHTML = vidasEnemigo
+    } else {
+        resultado = "¡PERDISTE ESTA RONDA! 😢"
+        vidasJugador--
+        spanVidaJugador.innerHTML = vidasJugador
+    }
+
+    crearMensaje(resultado)
+    revisarVidas()
+}
+
+// Función para mostrar el historial
+function crearMensaje(resultado) {
     let sectionMensajes = document.getElementById('mensajes')
-    
-    // Creamos un nuevo párrafo en el historial de mensajes
     let parrafo = document.createElement('p')
-    parrafo.innerHTML = `Atacaste con ${ataqueJugador}, el enemigo atacó con ${ataqueEnemigo}`
-    
+    parrafo.innerHTML = `Atacaste con ${ataqueJugador}, el enemigo atacó con ${ataqueEnemigo}. ${resultado}`
     sectionMensajes.appendChild(parrafo)
 }
 
+// NUEVA FUNCIÓN: Revisa si alguien se quedó sin vidas para terminar el juego
+function revisarVidas() {
+    if (vidasJugador == 0) {
+        crearMensajeFinal("Lo siento... ¡HAS PERDIDO EL COMBATE! 💀")
+    } else if (vidasEnemigo == 0) {
+        crearMensajeFinal("¡FELICITACIONES! ¡HAS GANADO EL COMBATE! 🏆")
+    }
+}
+
+// NUEVA FUNCIÓN: Bloquea los ataques y muestra el botón reiniciar
+function crearMensajeFinal(resultadoFinal) {
+    let sectionMensajes = document.getElementById('mensajes')
+    let parrafo = document.createElement('p')
+    parrafo.innerHTML = `<strong>${resultadoFinal}</strong>`
+    sectionMensajes.appendChild(parrafo)
+
+    // Deshabilitamos los botones de ataque para que no sigan atacando
+    botonFuego.disabled = true
+    botonAgua.disabled = true
+    botonTierra.disabled = true
+    botonAire.disabled = true
+
+    // Mostramos el botón de reiniciar
+    sectionReiniciar.style.display = 'block'
+}
+
+// NUEVA FUNCIÓN: Resetea el juego por completo
+function reiniciarJuego() {
+
+    // Recargamos la página web para limpiar todo de forma rápida y efectiva
+
+    location.reload()
+}
+
 // ESCUCHADOR GLOBAL
+
 window.addEventListener('load', iniciarJuego)
