@@ -31,20 +31,41 @@ botonPersonajeJugador.addEventListener('click', seleccionarPersonajeJugador);*/
 let sectionSeleccionarAtaque
 let botonPersonajeJugador
 
+// NUEVAS VARIABLES: Botones de ataque del jugador
+let botonFuego
+let botonAgua
+let botonTierra
+let botonAire
+
+// NUEVAS VARIABLES: Para guardar los ataques que se eligen
+let ataqueJugador
+let ataqueEnemigo
+
 // Función principal que arranca el juego cuando el HTML está totalmente cargado
 function iniciarJuego() {
-    // 1. Vinculamos las secciones y botones del HTML
     sectionSeleccionarAtaque = document.getElementById('seleccionar-ataque')
     botonPersonajeJugador = document.getElementById('boton-personaje')
+
+    // 1. Vinculamos los botones de ataque del HTML a JS
+    botonFuego = document.getElementById('boton-fuego')
+    botonAgua = document.getElementById('boton-agua')
+    botonTierra = document.getElementById('boton-tierra')
+    botonAire = document.getElementById('boton-aire')
 
     // 2. Ocultamos la sección de ataques al inicio
     sectionSeleccionarAtaque.style.display = 'none'
 
-    // 3. Escuchamos el click para elegir personaje
+    // 3. Escuchamos los clics
     botonPersonajeJugador.addEventListener('click', seleccionarPersonajeJugador)
+    
+    // Escuchamos los clics de los botones de ataque
+    botonFuego.addEventListener('click', ataqueFuego)
+    botonAgua.addEventListener('click', ataqueAgua)
+    botonTierra.addEventListener('click', ataqueTierra)
+    botonAire.addEventListener('click', ataqueAire)
 }
 
-// Función para mostrar el personaje seleccionado y activar el ataque enemigo
+// Función para seleccionar el personaje
 function seleccionarPersonajeJugador() {
     let inputZuko = document.getElementById('zuko')
     let inputKatara = document.getElementById('katara')
@@ -52,7 +73,6 @@ function seleccionarPersonajeJugador() {
     let inputToph = document.getElementById('toph')
     let personajeJugador = document.getElementById('personaje-jugador')
 
-    // Variable para verificar si el usuario realmente eligió a alguien
     let seSeleccionoPersonaje = true
 
     if (inputZuko.checked) {
@@ -68,32 +88,64 @@ function seleccionarPersonajeJugador() {
         seSeleccionoPersonaje = false
     }
 
-    // Solo si seleccionó un personaje válido, mostramos los ataques y responde el enemigo
     if (seSeleccionoPersonaje) {
         sectionSeleccionarAtaque.style.display = 'block'
-        ataqueAleatorioEnemigo()
     }
 }
 
-// Función para que el ataque sea aleatorio entre los 4 elementos
+// NUEVAS FUNCIONES: Qué pasa cuando el jugador presiona un ataque
+function ataqueFuego() {
+    ataqueJugador = 'FUEGO 🔥'
+    ataqueAleatorioEnemigo()
+}
+
+function ataqueAgua() {
+    ataqueJugador = 'AGUA 💧'
+    ataqueAleatorioEnemigo()
+}
+
+function ataqueTierra() {
+    ataqueJugador = 'TIERRA 🌱'
+    ataqueAleatorioEnemigo()
+}
+
+function ataqueAire() {
+    ataqueJugador = 'AIRE 💨'
+    ataqueAleatorioEnemigo()
+}
+
+// Función para el ataque aleatorio del enemigo
 function aleatorio(min, max){
     return Math.floor(Math.random() * (max - min + 1) + min)
 }
 
 function ataqueAleatorioEnemigo() {
     let ataqueAleatorio = aleatorio(1, 4)
-    let ataqueEnemigo = document.getElementById('ataque-enemigo')
-
+    
     if (ataqueAleatorio == 1) {
-        ataqueEnemigo.innerHTML = 'El enemigo atacó con Fuego 🔥'
+        ataqueEnemigo = 'FUEGO 🔥'
     } else if (ataqueAleatorio == 2) {
-        ataqueEnemigo.innerHTML = 'El enemigo atacó con Agua 💧'
+        ataqueEnemigo = 'AGUA 💧'
     } else if (ataqueAleatorio == 3) {
-        ataqueEnemigo.innerHTML = 'El enemigo atacó con Tierra 🌱'
+        ataqueEnemigo = 'TIERRA 🌱'
     } else {
-        ataqueEnemigo.innerHTML = 'El enemigo atacó con Aire 💨'
+        ataqueEnemigo = 'AIRE 💨'
     }
+
+    // Llamamos a una función nueva para mostrar el resultado en el historial
+    crearMensaje()
 }
 
-// ESCUCHADOR GLOBAL: Llama a iniciarJuego cuando el HTML está listo
+// NUEVA FUNCIÓN: Muestra en el HTML qué atacó cada uno
+function crearMensaje() {
+    let sectionMensajes = document.getElementById('mensajes')
+    
+    // Creamos un nuevo párrafo en el historial de mensajes
+    let parrafo = document.createElement('p')
+    parrafo.innerHTML = `Atacaste con ${ataqueJugador}, el enemigo atacó con ${ataqueEnemigo}`
+    
+    sectionMensajes.appendChild(parrafo)
+}
+
+// ESCUCHADOR GLOBAL
 window.addEventListener('load', iniciarJuego)
