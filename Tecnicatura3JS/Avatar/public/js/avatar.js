@@ -27,89 +27,13 @@ let botonPersonajeJugador = document.getElementById('boton-personaje')
 
 botonPersonajeJugador.addEventListener('click', seleccionarPersonajeJugador);*/
 
-
-//Ocultamos la sección ataques al iniciar el juego:
-
-let sectionSeleccionarAtaque = document.getElementById('seleccionar-ataque')
-
-sectionSeleccionarAtaque.style.display = 'none'
-
-
-//Mejora para llamar al html que muestre el personaje al seleccionarlo:
-
-function seleccionarPersonajeJugador() {
-
-    //Mostramos la sección ataque cuando elige personaje:
-    sectionSeleccionarAtaque.style.display = 'block'
-
-    let inputZuko = document.getElementById('zuko')
-    let inputKatara = document.getElementById('katara')
-    let inputAang = document.getElementById('aang')
-    let inputToph = document.getElementById('toph')
-
-    let personajeJugador = document.getElementById('personaje-jugador')
-
-    if (inputZuko.checked) {
-        personajeJugador.innerHTML = 'Seleccionaste a Zuko 🔥'
-        ataqueAleatorioEnemigo()
-    }
-    else if (inputKatara.checked) {
-        personajeJugador.innerHTML = 'Seleccionaste a Katara 💧'
-        ataqueAleatorioEnemigo()
-    }
-    else if (inputAang.checked) {
-        personajeJugador.innerHTML = 'Seleccionaste a Aang 💨'
-        ataqueAleatorioEnemigo()
-    }
-    else if (inputToph.checked) {
-        personajeJugador.innerHTML = 'Seleccionaste a Toph 🌱'
-        ataqueAleatorioEnemigo()
-    }
-    else {
-        personajeJugador.innerHTML = 'Selecciona un personaje'
-    }
-}
-
-let botonPersonajeJugador = document.getElementById('boton-personaje')
-
-botonPersonajeJugador.addEventListener('click', seleccionarPersonajeJugador)
-
-
-//Función para que el ataque sea aleatorio entre los 4 elementos:
-function aleatorio(min, max){
-    return Math.floor(Math.random() * (max - min + 1) + min)
-}
-
-
-function ataqueAleatorioEnemigo() {
-
-    let ataqueAleatorio = aleatorio(1,4)
-
-    let ataqueEnemigo = document.getElementById('ataque-enemigo')
-
-    if (ataqueAleatorio == 1) {
-        ataqueEnemigo.innerHTML = 'El enemigo atacó con Fuego 🔥'
-    }
-    else if (ataqueAleatorio == 2) {
-        ataqueEnemigo.innerHTML = 'El enemigo atacó con Agua 💧'
-    }
-    else if (ataqueAleatorio == 3) {
-        ataqueEnemigo.innerHTML = 'El enemigo atacó con Tierra 🌱'
-    }
-    else {
-        ataqueEnemigo.innerHTML = 'El enemigo atacó con Aire 💨'
-    }
-}
-
-/* Borrador de correccion:
-
-// Variables globales de las secciones
+// Variables globales de las secciones y botones
 let sectionSeleccionarAtaque
 let botonPersonajeJugador
 
 // Función principal que arranca el juego cuando el HTML está totalmente cargado
 function iniciarJuego() {
-    // 1. Vinculamos las secciones del HTML
+    // 1. Vinculamos las secciones y botones del HTML
     sectionSeleccionarAtaque = document.getElementById('seleccionar-ataque')
     botonPersonajeJugador = document.getElementById('boton-personaje')
 
@@ -120,6 +44,7 @@ function iniciarJuego() {
     botonPersonajeJugador.addEventListener('click', seleccionarPersonajeJugador)
 }
 
+// Función para mostrar el personaje seleccionado y activar el ataque enemigo
 function seleccionarPersonajeJugador() {
     let inputZuko = document.getElementById('zuko')
     let inputKatara = document.getElementById('katara')
@@ -127,33 +52,30 @@ function seleccionarPersonajeJugador() {
     let inputToph = document.getElementById('toph')
     let personajeJugador = document.getElementById('personaje-jugador')
 
-    // Validamos que el usuario haya seleccionado una opción activa
+    // Variable para verificar si el usuario realmente eligió a alguien
+    let seSeleccionoPersonaje = true
+
     if (inputZuko.checked) {
         personajeJugador.innerHTML = 'Seleccionaste a Zuko 🔥'
-        sectionSeleccionarAtaque.style.display = 'block' // Mostramos ataques
-        ataqueAleatorioEnemigo()
-    }
-    else if (inputKatara.checked) {
+    } else if (inputKatara.checked) {
         personajeJugador.innerHTML = 'Seleccionaste a Katara 💧'
-        sectionSeleccionarAtaque.style.display = 'block'
-        ataqueAleatorioEnemigo()
-    }
-    else if (inputAang.checked) {
+    } else if (inputAang.checked) {
         personajeJugador.innerHTML = 'Seleccionaste a Aang 💨'
-        sectionSeleccionarAtaque.style.display = 'block'
-        ataqueAleatorioEnemigo()
-    }
-    else if (inputToph.checked) {
+    } else if (inputToph.checked) {
         personajeJugador.innerHTML = 'Seleccionaste a Toph 🌱'
+    } else {
+        personajeJugador.innerHTML = 'Selecciona un personaje'
+        seSeleccionoPersonaje = false
+    }
+
+    // Solo si seleccionó un personaje válido, mostramos los ataques y responde el enemigo
+    if (seSeleccionoPersonaje) {
         sectionSeleccionarAtaque.style.display = 'block'
         ataqueAleatorioEnemigo()
-    }
-    else {
-        personajeJugador.innerHTML = '⚠️ Por favor, selecciona un personaje'
     }
 }
 
-// Función matemática para generar números aleatorios
+// Función para que el ataque sea aleatorio entre los 4 elementos
 function aleatorio(min, max){
     return Math.floor(Math.random() * (max - min + 1) + min)
 }
@@ -164,18 +86,14 @@ function ataqueAleatorioEnemigo() {
 
     if (ataqueAleatorio == 1) {
         ataqueEnemigo.innerHTML = 'El enemigo atacó con Fuego 🔥'
-    }
-    else if (ataqueAleatorio == 2) {
+    } else if (ataqueAleatorio == 2) {
         ataqueEnemigo.innerHTML = 'El enemigo atacó con Agua 💧'
-    }
-    else if (ataqueAleatorio == 3) {
+    } else if (ataqueAleatorio == 3) {
         ataqueEnemigo.innerHTML = 'El enemigo atacó con Tierra 🌱'
-    }
-    else {
+    } else {
         ataqueEnemigo.innerHTML = 'El enemigo atacó con Aire 💨'
     }
 }
 
 // ESCUCHADOR GLOBAL: Llama a iniciarJuego cuando el HTML está listo
-window.addEventListener('load', iniciarJuego) *\
-
+window.addEventListener('load', iniciarJuego)
