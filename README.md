@@ -188,21 +188,16 @@ La aplicación de prácticas basadas en Scrum permitió:
 
 ## Repositorio GitHub
 
-![Repositorio GitHub](ImagenesScrum/repositorio.png)
+![Repositorio GitHub](ImagenesScrum/RamaPruebaRB.png)
 
 
 ## Historial de Commits
 
-![Commits 1](ImagenesScrum/commits1.png)
+![Commits 1](ImagenesScrum/HistorialCommitsGral.png)
 
-![Commits 2](ImagenesScrum/commits2.png)
+![Commits 2](ImagenesScrum/CommitsJMM_1.png)
 
-
-## Actividades y Entregas
-
-![Entrega 1](ImagenesScrum/entrega1.png)
-
-![Entrega 2](ImagenesScrum/entrega2.png)
+![Commits 2](ImagenesScrum/CommitsJMM_2.png)
 
 
 # 🎓 Conclusión
