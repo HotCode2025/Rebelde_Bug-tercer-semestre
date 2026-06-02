@@ -186,6 +186,15 @@ La aplicación de prácticas basadas en Scrum permitió:
 
 # 📎 Evidencias
 
+# 📋 Tablero Kanban
+
+Para el seguimiento de actividades del Sprint se utilizó una hoja compartida de Google Sheets adaptada al enfoque Kanban.
+
+Las tareas fueron organizadas según su estado de avance en las categorías Pendiente, En Progreso y Finalizado, permitiendo visualizar el progreso del trabajo y coordinar las actividades del equipo durante el desarrollo del semestre.
+
+![Tablero Kanban](ImagenesScrum/KanbanRebeldeBug.PNG)
+![Tablero Kanban](ImagenesScrum/KanbanRebeldeBug_2.PNG)
+
 ## Repositorio GitHub
 
 ![Repositorio GitHub](ImagenesScrum/RamaPruebaRB.PNG)
