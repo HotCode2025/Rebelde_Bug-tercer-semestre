@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Torres de Hanoi</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="contenedor">
+
+        <h1>🗼 Torres de Hanoi</h1>
+
+        <div class="panel">
+
+            <label for="cantidadDiscos">
+                Cantidad de discos:
+            </label>
+
+            <input
+                type="number"
+                id="cantidadDiscos"
+                min="1"
+                max="8"
+                value="3">
+
+            <button onclick="iniciar()">
+                Resolver
+            </button>
+
+        </div>
+
+        <h2 id="totalMovimientos">
+            Total de movimientos: 0
+        </h2>
+
+        <h3 id="contador">
+            Movimiento: 0
+        </h3>
+
+        <p id="estado"></p>
+
+        <div class="torres">
+
+            <div class="torre">
+                <span class="nombre">A</span>
+                <div class="poste"></div>
+                <div class="base"></div>
+            </div>
+
+            <div class="torre">
+                <span class="nombre">B</span>
+                <div class="poste"></div>
+                <div class="base"></div>
+            </div>
+
+            <div class="torre">
+                <span class="nombre">C</span>
+                <div class="poste"></div>
+                <div class="base"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
