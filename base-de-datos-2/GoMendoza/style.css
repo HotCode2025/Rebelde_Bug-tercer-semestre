@@ -1,0 +1,250 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+
+    font-family: Arial, sans-serif;
+
+    background: #121212;
+
+    color: white;
+}
+
+
+/* HEADER */
+
+header{
+
+    text-align: center;
+
+    padding: 40px 20px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #7B1E1E,
+            #2B0A0A
+        );
+}
+
+header h1{
+
+    font-size: 3rem;
+
+    margin-bottom: 10px;
+}
+
+header p{
+
+    color: #ddd;
+}
+
+
+/* REGISTER */
+
+.register-container{
+
+    display: flex;
+
+    justify-content: center;
+
+    margin-top: 40px;
+}
+
+.register-card{
+
+    background: #1E1E1E;
+
+    padding: 30px;
+
+    width: 400px;
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 0 15px rgba(0,0,0,0.4);
+}
+
+.register-card h2{
+
+    margin-bottom: 20px;
+}
+
+.register-card input[type="text"]{
+
+    width: 100%;
+
+    padding: 12px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    margin-bottom: 20px;
+
+    background: #2A2A2A;
+
+    color: white;
+}
+
+.preferences{
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 15px;
+
+    margin: 20px 0;
+}
+
+.preferences label{
+
+    background: #2A2A2A;
+
+    padding: 10px;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+}
+
+
+/* BUTTON */
+
+button{
+
+    width: 100%;
+
+    padding: 12px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: #8B0000;
+
+    color: white;
+
+    font-size: 1rem;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+button:hover{
+
+    background: #b30000;
+}
+
+
+/* TITLES */
+
+.section-title{
+
+    text-align: center;
+
+    margin: 50px 0 30px;
+
+    font-size: 2rem;
+}
+
+
+/* EVENTS */
+
+#events-container{
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(280px,1fr));
+
+    gap: 25px;
+
+    padding: 20px;
+}
+
+.event-card{
+
+    background: #1E1E1E;
+
+    padding: 20px;
+
+    border-radius: 15px;
+
+    transition: 0.3s;
+
+    box-shadow:
+        0 0 10px rgba(0,0,0,0.3);
+}
+
+.event-card:hover{
+
+    transform: translateY(-5px);
+}
+
+.event-card h3{
+
+    margin-bottom: 10px;
+
+    color: #ffb3b3;
+}
+
+.event-card p{
+
+    margin-bottom: 8px;
+
+    color: #ddd;
+}
+
+
+/* MAP */
+
+#map{
+
+    width: 90%;
+
+    height: 500px;
+
+    margin: auto;
+
+    border-radius: 15px;
+
+    overflow: hidden;
+
+    margin-bottom: 50px;
+}
+
+
+/* FOOTER */
+
+footer{
+
+    text-align: center;
+
+    padding: 20px;
+
+    background: #1A1A1A;
+
+    color: #aaa;
+}
+
+
+/* RESPONSIVE */
+
+@media(max-width: 600px){
+
+    .register-card{
+
+        width: 90%;
+    }
+
+    header h1{
+
+        font-size: 2rem;
+    }
+}

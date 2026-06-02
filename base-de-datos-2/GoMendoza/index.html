@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>GoMendoza</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- CONECCION MAPA -->
+    <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet/dist/leaflet.css"
+    />
+
+    <script
+    src="https://unpkg.com/leaflet/dist/leaflet.js">
+    </script>
+
+</head>
+
+<body>
+
+    <!-- HEADER -->
+
+    <header>
+
+        <h1>GoMendoza</h1>
+
+        <p>
+            Discover the best tourist events in Mendoza
+        </p>
+
+    </header>
+
+
+    <!-- REGISTER -->
+
+    <section class="register-container">
+
+        <div class="register-card">
+
+            <h2>User Registration</h2>
+
+            <input
+                type="text"
+                id="username"
+                placeholder="Your name"
+            >
+
+            <h3>Select your interests</h3>
+
+            <div class="preferences">
+
+                <label>
+                    <input type="checkbox" value="Music">
+                    Music
+                </label>
+
+                <label>
+                    <input type="checkbox" value="Food">
+                    Food
+                </label>
+
+                <label>
+                    <input type="checkbox" value="Wine">
+                    Wine
+                </label>
+
+                <label>
+                    <input type="checkbox" value="Nature">
+                    Nature
+                </label>
+
+                <label>
+                    <input type="checkbox" value="Sports">
+                    Sports
+                </label>
+
+            </div>
+
+            <button onclick="savePreferences()">
+                Discover Events
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- EVENTS -->
+
+    <section>
+
+        <h2 class="section-title">
+            Recommended Events
+        </h2>
+
+        <div id="events-container"></div>
+
+    </section>
+
+
+    <!-- MAP -->
+
+    <section>
+
+        <h2 class="section-title">
+            Events Map
+        </h2>
+
+        <div id="map"></div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <p>
+            GoMendoza © 2026
+        </p>
+
+    </footer>
+
+
+    <script src="events.js"></script>
+
+    <script src="app.js"></script>
+
+</body>
+
+</html>
