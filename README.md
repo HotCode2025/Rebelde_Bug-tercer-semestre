@@ -1,17 +1,16 @@
 # 📌 TRABAJO FINAL – METODOLOGÍA SCRUM
 
 ## 👨‍🏫 Profesor
-
 Ariel Betancud
 
 ## 👥 Equipo
-
 Rebelde Bug
 
+---
 
-# 👥 Evolución del Equipo
+# 👥 Evolución del Equipo y Resiliencia (Metamorfosis)
 
-El equipo **Rebelde Bug** inició sus actividades académicas del año 2026, tercer semestre, con ocho integrantes:
+El equipo **Rebelde Bug** inició sus actividades académicas del año 2026, correspondiente al tercer semestre, con una estructura de ocho integrantes:
 
 * Melina Gallo
 * Rubén Marchisio
@@ -22,199 +21,120 @@ El equipo **Rebelde Bug** inició sus actividades académicas del año 2026, ter
 * Jimena Karin Pérez
 * Ivana Molina
 
-Durante el desarrollo del cuatrimestre algunos integrantes dejaron de participar activamente por distintos motivos académicos y personales.
+A lo largo del cuatrimestre, por diversos motivos académicos y personales de fuerza mayor, varios compañeros debieron abandonar el cursado activo. Quienes quedamos asumimos el desafío. 
 
-Como parte del proceso de adaptación del equipo, y siguiendo los principios ágiles de Scrum, las responsabilidades fueron reorganizadas para garantizar la continuidad de las actividades y el cumplimiento de los objetivos propuestos.
+Siguiendo los principios ágiles fundamentales de Scrum (Inspección y Adaptación), reorganizamos el flujo completo de trabajo. Hacia finales de Mayo y durante la etapa crítica de cierre del semestre, las tareas de programación, control de versiones, diseño, documentación y coordinación final fueron absorbidas con total compromiso por el núcleo remanente:
 
-Hacia finales de Mayo y durante la etapa de cierre del semestre, las tareas de organización, seguimiento, documentación, coordinación y entrega fueron asumidas principalmente por:
+* **Jimena Karin Pérez**
+* **Micaela Cynthia Aramayo**
+* **Melina Gallo**
+* **Zoe Geraldine Garnica**
 
-* Jimena Karin Pérez
-* Micaela Cynthia Aramayo
-* Melina Gallo
+Este informe es el reflejo honesto de esas vicisitudes y de cómo la comunicación constante por canales alternativos nos permitió mantener a flote el proyecto e integrar de forma equitativa.
 
-La comunicación constante, la colaboración y la distribución compartida de responsabilidades permitieron mantener el avance de los trabajos grupales y cumplir con las entregas previstas.
-
+---
 
 # 📖 Introducción
 
-El presente trabajo tiene como objetivo mostrar la aplicación de la metodología Scrum durante una semana de trabajo del equipo Rebelde Bug.
+El presente trabajo tiene como objetivo mostrar la aplicación real de la metodología Scrum durante el desarrollo del proyecto de tercer semestre del equipo Rebelde Bug. 
 
-Durante el desarrollo del cuatrimestre utilizamos herramientas de trabajo colaborativo para organizar tareas, realizar entregas y mantener actualizado el repositorio compartido del grupo.
+Alineados con las correcciones de nuestros tutores, tradujimos de forma transparente el registro histórico que llevábamos de manera interna al ecosistema técnico nativo de **GitHub Issues** y **GitHub Projects**. Esto nos permitió respaldar cada tarea de gestión con los commits y lo que fuimos subiendo a la plataforma.
 
+---
 
 # 🛠️ Herramientas Utilizadas
 
-* Git
-* GitHub
-* Visual Studio Code
-* JavaScript
-* Python
-* WhatsApp
-* Google Drive
+* **Gestión y Control de Flujo:** GitHub Projects (Tablero Kanban nativo) e Issues.
+* **Control de Versiones:** Git y GitHub Repositories (Rama de pruebas).
+* **Entorno de Desarrollo:** Visual Studio Code, PyCharm, NetBeans, Base de Datos.
+* **Lenguajes y Tecnologías:** JavaScript, Python y Base de Datos.
+* **Sincronización y Comunicación:** WhatsApp y Google Drive/Sheets (como registro complementario).
 
-Estas herramientas permitieron coordinar el trabajo colaborativo, compartir avances y mantener un control de versiones adecuado durante el desarrollo de las actividades.
+---
 
+# 🔄 Aplicación de Scrum Adaptada al Entorno
 
-# 🔄 Aplicación de Scrum
+## 👨‍💻 Organización del Equipo y Gestión de Requerimientos
+Las tareas se desglosaron en el backlog técnico. Cada integrante activa se postuló de forma transparente según su disponibilidad horaria. En nuestro equipo rige una regla estricta: **el que se postula, cumple**, protegiendo el ritmo de desarrollo del Sprint.
 
-Durante el trabajo se aplicaron principios de Scrum adaptados al contexto académico.
+## 📅 Daily Scrum (Sincronización Diaria)
+Dada la reducción de integrantes y los horarios cruzados, la sincronización diaria se mudó a canales dinámicos como WhatsApp. En estas sesiones ágiles compartíamos:
+1. Qué tareas completamos del código.
+2. Qué actividades estaban en proceso dentro de la rama local.
+3. Qué impedimentos o conflictos de Git surgían para resolver en conjunto.
 
-## 👨‍💻 Organización del Equipo
+## ✅ Sprint Review (Revisión del Incremento)
+Las entregas parciales y las defensas en vivo con el docente y tutores funcionaron como nuestras instancias de revisión. Sus observaciones nos permitieron iterar y aplicar mejoras de código sobre la marcha.
 
-Las tareas fueron distribuidas según la disponibilidad y conocimientos de cada integrante.
+## 🔍 Sprint Retrospective (Estrategia de Ramas)
+Aprendiendo de los dolores de cabeza del año pasado (2025) por conflictos masivos en múltiples ramas, la retrospectiva arrojó una solución drástica y eficiente: **utilizar una única rama `prueba` común**. Cada integrante hace un `git pull` obligatorio antes de programar y unifica sus cambios en `prueba` antes de hacer el despliegue final en la rama `main`. Esto automatizó la integración y redujo los errores a cero.
 
-Antes de comenzar una actividad se definían los objetivos a cumplir y posteriormente se realizaba una puesta en común para verificar avances, detectar dificultades y corregir errores.
+---
 
-La comunicación permanente permitió reorganizar responsabilidades cuando algunos integrantes dejaron de participar activamente.
+# 🚀 Sprints Cronológicos y Asistencia Semanal
+*(Fechas validadas en base a la línea temporal y los registros de entrega del proyecto)*
 
+### Sprint 1 – Semana del 04/05 al 08/05 de 2026
+* **Lunes 04/05:** Sincronización grupal para reestructurar las tareas del equipo tras las bajas sufridas. Planificación del módulo práctico.
+* **Martes 05/05:** Distribución de actividades de código según disponibilidad horaria.
+* **Miércoles 06/05:** Integración de archivos y control de versiones en la rama de prueba.
+* **Jueves 07/05:** **Hito de Entrega:** Finalización y subida exitosa del proyecto *"Piedra, Papel o Tijera"* (Registrado en el Tablero Kanban con fecha de cierre May 7).
+* **Viernes 08/05:** Balance del cierre del Sprint y revisión de código limpio.
 
-## 📅 Daily Scrum
+### Sprint 2 – Semana del 11/05 al 15/05 de 2026
+* **Lunes 11/05:** Apertura del Sprint y revisión de prioridades.
+* **Martes 12/05:** **Hito de Entrega:** Melina efectúa la subida y cierre de la tarea *"Clase 5 Casting"* de Java (Registrado en el Tablero Kanban con fecha de cierre May 12).
+* **Miércoles 13/05:** Puesta en común del avance de los scripts del proyecto integrador.
+* **Jueves 14/05:** Registro de asistencia grupal y testeos cruzados de la rama prueba.
+* **Viernes 15/05:** Control de pendientes y preparación para los requerimientos de la semana entrante.
 
-La comunicación diaria se realizó principalmente mediante WhatsApp.
+### Sprint 3 – Semana del 18/05 al 22/05 de 2026
+* **Lunes 18/05:** **Hito de Entrega:** Micaela realiza la entrega técnica del *"Diagrama UML acceso datos clase 07 de Python"* (Registrado en el Tablero Kanban con fecha de cierre May 18).
 
-En estas conversaciones se compartía:
+---
 
-* Qué tareas se habían completado.
-* Qué actividades estaban en proceso.
-* Qué dificultades surgían.
-* Qué ayuda necesitaba cada integrante.
-* A través de un google docs, ir marcando tareas y/o consignas cumplidas.
+# ⚠️ Problemas Encontrados y Soluciones Implementadas
 
+* **Reducción Progresiva del Grupo:** Pasamos de ser 8 a quedar únicamente 4 compañeras activas.
+  * **Solución:** Reasignamos las tareas y los roles del backlog en GitHub Projects de manera equitativa entre nosotras, asumiendo una carga compartida para no comprometer la regularidad.
+* **Diferencias Horarias:** Tiempos de trabajo asincrónicos entre las integrantes.
+  * **Solución:** Centralización estricta de la información en el Tablero Kanban de GitHub para que cada una supiera el estado exacto del proyecto al conectarse, sin pisar el trabajo de otra.
+* **Conflictos de Git:** Superposición de código en archivos comunes.
+  * **Solución:** Adopción de la rama única de pre-producción (`prueba`) combinada con alertas rápidas por WhatsApp antes de realizar un `git push`.
 
-## ✅ Sprint Review
+---
 
-Las entregas y exposiciones realizadas durante las clases funcionaron como instancias de revisión.
+# 📊 Resultados Obtenidos
 
-A partir de las observaciones del docente y tutores, se realizaron correcciones y mejoras en los trabajos presentados.
+La migración a las herramientas nativas de GitHub nos permitió:
+* Centralizar la gestión del proyecto sin depender de aplicativos externos.
+* Visualizar en tiempo real el progreso mediante el flujo Kanban (*Todo*, *In Progress*, *Done*).
+* Vincular de forma transparente la documentación teórica con las evidencias de código de la terminal.
 
+---
 
-## 🔍 Sprint Retrospective
+# 📎 Evidencias Técnicas y Anexos
 
-Luego de detectar conflictos al trabajar sobre diferentes ramas del repositorio en el semestre pasado, año 2025, el equipo decidió simplificar la estrategia de trabajo utilizando una única rama de pruebas antes de fusionar los cambios a la rama principal.
+### 1. Tablero Kanban Scrum (GitHub Projects - Vista Board)
+Interfaz visual que documenta las tareas completadas por las integrantes activas y los requerimientos actualmente en curso (*Base de Datos* y *Metodología*):
+![Tablero Kanban Scrum](ImagenesScrum/TableroKanbanGH.PNG)
 
-Esta decisión redujo errores y facilitó la integración del trabajo realizado por distintos integrantes, exigiendo también responsabilidad de los pull, comunicación sobre tiempos de trabajo en el repositorio, colaboración y consciencia de metodología.
+### 2. Estructura de la Rama de Desarrollo (Prueba)
+Validación del entorno de trabajo unificado implementado por el equipo para evitar conflictos:
+![Estructura Rama Prueba GitHub](ImagenesScrum/RamaPruebaRB.PNG)
 
+### 3. Registro Histórico de Commits Generales
+Evidencia del código fuente subido y distribuido de forma equitativa por las integrantes del grupo:
+![Historial General de Commits](ImagenesScrum/HistorialCommitsGral.PNG)
 
-# 🚀 Semana de Trabajo Seleccionada
+### 4. Logs e Historial de la Terminal
+Capturas de consola que certifican la trazabilidad técnica del proyecto:
+![Logs de Commits 1](ImagenesScrum/CommitsJMM_1.PNG)
+![Logs de Commits 2](ImagenesScrum/CommitsJMM_2.PNG)
 
-## Sprint – Semana del 25 al 29 de Mayo de 2026
-
-### 🎯 Objetivos del Sprint
-
-* Organizar las entregas pendientes.
-* Verificar el estado de los trabajos grupales.
-* Mantener actualizado el repositorio.
-* Coordinar responsabilidades entre las integrantes activas.
-* Preparar documentación y evidencias para las entregas finales.
-
-## 📌 Lunes
-
-Se realizó una revisión general de las tareas pendientes del grupo.
-
-Las integrantes activas verificaron el estado de los trabajos entregados y aquellos que requerían correcciones.
-
-También se revisó el repositorio para confirmar que todos los cambios estuvieran correctamente registrados.
-
-
-## 📌 Martes
-
-Se distribuyeron actividades según disponibilidad horaria.
-
-Se revisaron archivos compartidos y se actualizaron documentos que formaban parte de las entregas finales.
-
-La comunicación se mantuvo mediante mensajes grupales para coordinar avances.
-
-
-## 📌 Miércoles
-
-Se verificó el historial de commits del repositorio.
-
-Se analizaron los aportes realizados durante el cuatrimestre y se seleccionaron evidencias para documentar el trabajo colaborativo.
-
-También se revisó la organización de carpetas y archivos.
-
-
-## 📌 Jueves
-
-Se realizó seguimiento de las actividades pendientes.
-
-Se completaron correcciones menores y se preparó la documentación final para su presentación.
-
-Las integrantes compartieron observaciones y realizaron una revisión conjunta del material.
-
-
-## 📌 Viernes
-
-Se efectuó la revisión final del trabajo.
-
-Se verificó que todas las evidencias estuvieran correctamente incorporadas y que la documentación reflejara el proceso de trabajo realizado por el equipo.
-
-Finalmente se dejó preparada la entrega correspondiente.
-
-
-# ⚠️ Problemas Encontrados
-
-Durante el desarrollo del proyecto surgieron diversas dificultades:
-
-* Reducción progresiva de integrantes activos.
-* Diferencias en la disponibilidad horaria.
-* Conflictos ocasionales al trabajar sobre algún proyecto y definirlo.
-* Necesidad de reorganizar tareas durante el cuatrimestre.
-
-
-# ✅ Soluciones Implementadas
-
-Para afrontar estas dificultades se adoptaron las siguientes medidas:
-
-* Redistribución de responsabilidades.
-* Comunicación constante entre integrantes.
-* Revisión periódica de avances.
-* Uso de GitHub para control de versiones.
-* Simplificación de la estrategia de ramas del repositorio.
-
-
-# 📈 Resultados Obtenidos
-
-La aplicación de prácticas basadas en Scrum permitió:
-
-* Mejor organización de las actividades.
-* Seguimiento de tareas pendientes.
-* Trabajo colaborativo más eficiente.
-* Mayor control sobre las versiones de los proyectos.
-* Adaptación frente a cambios en la composición del equipo.
-
-
-# 📎 Evidencias
-
-# 📋 Tablero Kanban
-
-Para el seguimiento de actividades del Sprint se utilizó una hoja compartida de Google Sheets adaptada al enfoque Kanban.
-
-Las tareas fueron organizadas según su estado de avance en las categorías Pendiente, En Progreso y Finalizado, permitiendo visualizar el progreso del trabajo y coordinar las actividades del equipo durante el desarrollo del semestre.
-
-![Tablero Kanban](ImagenesScrum/RebeldeBugKanban.PNG)
-![Tablero Kanban](ImagenesScrum/RebeldeBugKanban_2.PNG)
-
-## Repositorio GitHub
-
-![Repositorio GitHub](ImagenesScrum/RamaPruebaRB.PNG)
-
-
-## Historial de Commits
-
-![Commits 1](ImagenesScrum/HistorialCommitsGral.PNG)
-
-![Commits 2](ImagenesScrum/CommitsJMM_1.PNG)
-
-![Commits 2](ImagenesScrum/CommitsJMM_2.PNG)
-
+---
 
 # 🎓 Conclusión
 
-La experiencia permitió aplicar conceptos de la metodología Scrum en un entorno académico, favoreciendo la organización, la comunicación y el trabajo colaborativo.
+Esta experiencia académica nos permitió vivir la esencia real del agilismo: **Scrum no es un marco rígido, es una herramienta para abrazar el cambio**. A pesar de haber perdido a la mitad del equipo original durante el cuatrimestre, la reestructuración interna, la disciplina en el control de versiones y el uso del tablero Kanban nativo de GitHub nos permitieron suplir las bajas con organización. Logramos consolidarnos como un equipo resiliente, coordinado y técnicamente eficiente, alcanzando los objetivos del tercer cuatrimestre en tiempo y forma.
 
-A pesar de los cambios en la composición original del equipo, fue posible reorganizar responsabilidades y continuar avanzando hacia los objetivos planteados.
-
-El uso de herramientas como Git y GitHub resultó fundamental para coordinar tareas, registrar avances y mantener un historial del trabajo realizado durante el cuatrimestre.
-
-Finalmente, la experiencia permitió comprender la importancia de la planificación, la adaptación al cambio y la colaboración continua, principios fundamentales de la metodología Scrum.
