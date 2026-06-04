@@ -8,7 +8,7 @@ Rebelde Bug
 
 ---
 
-# 👥 Evolución del Equipo y Resiliencia (Metamorfosis)
+# 👥 Evolución del Equipo
 
 El equipo **Rebelde Bug** inició sus actividades académicas del año 2026, correspondiente al tercer semestre, con una estructura de ocho integrantes:
 
