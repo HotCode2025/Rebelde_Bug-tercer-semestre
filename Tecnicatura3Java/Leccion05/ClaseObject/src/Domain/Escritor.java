@@ -1,7 +1,7 @@
 /*Clase 5 5.1 Conversión de objetos Casting
 
  */
-package Domain;
+package domain;
 
 /**
  *
@@ -22,6 +22,6 @@ public class Escritor extends Empleado {
     
     @Override
     public String toString() {
-        return "Escritor{" + "tipoEscritura=" + tipoEscritura +'y+ " "+super.toString();
+        return "Escritor{tipoEscritura=" + tipoEscritura + "} " + super.toString();
     }
 }
